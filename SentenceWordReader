@@ -1,0 +1,24 @@
+using System;
+
+namespace Methods_Challenge
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a sentence:");
+            string usrInput = Console.ReadLine();
+            wordCount(usrInput);
+
+            // waits before closing
+            Console.ReadKey();
+        }
+
+        static int wordCount(string usrInput)
+        {
+            int result = usrInput.Split(" ").Length;
+            Console.WriteLine($"There are {result} words in that sentence");
+            return result;
+        }
+    }
+}
